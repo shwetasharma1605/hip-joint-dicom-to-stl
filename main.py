@@ -42,3 +42,10 @@ bone_threshold_max = 1900
 bone_mask = (volume > bone_threshold_min) & (volume < bone_threshold_max)
 print(f"Bone mask shape: {bone_mask.shape}")
 print(f"Bone voxels found: {np.sum(bone_mask)}")
+
+# Apply Marching Cubes to generate 3D surface mesh
+print("Running Marching Cubes... this may take a moment")
+verts, faces, normals, values = measure.marching_cubes(bone_mask, level=0.5)
+
+print(f"Vertices: {len(verts)}")
+print(f"Faces: {len(faces)}")
