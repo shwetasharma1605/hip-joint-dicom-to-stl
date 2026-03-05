@@ -49,3 +49,9 @@ verts, faces, normals, values = measure.marching_cubes(bone_mask, level=0.5)
 
 print(f"Vertices: {len(verts)}")
 print(f"Faces: {len(faces)}")
+
+# Export 3D mesh as STL file
+print("Exporting STL file...")
+mesh = trimesh.Trimesh(vertices=verts, faces=faces)
+mesh.export("hip_joint.stl")
+print("STL file saved as hip_joint.stl")
