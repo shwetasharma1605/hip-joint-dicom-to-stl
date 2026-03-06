@@ -39,7 +39,7 @@ volume = np.stack(slices, axis=0)
 print(f"3D Volume shape: {volume.shape}")
 
 # Block 5 - HU Thresholding
-bone_threshold_min = 300
+bone_threshold_min = 800
 bone_threshold_max = 1900
 bone_mask = (volume > bone_threshold_min) & (volume < bone_threshold_max)
 print(f"Bone mask shape: {bone_mask.shape}")
@@ -55,5 +55,6 @@ print(f"Faces: {len(faces)}")
 # Export 3D mesh as STL file
 print("Exporting STL file...")
 mesh = trimesh.Trimesh(vertices=verts, faces=faces)
+trimesh.smoothing.filter_laplacian(mesh, iterations=3)
 mesh.export("hip_joint.stl")
 print("STL file saved as hip_joint.stl")
