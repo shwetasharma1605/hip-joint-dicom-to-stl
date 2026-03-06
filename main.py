@@ -1,10 +1,12 @@
 import os
 import numpy as np
+import pydicom
 import pydicom.config
-pydicom.config.settings.reading_validation_mode = "WARN"
 import matplotlib.pyplot as plt
 from skimage import measure
 import trimesh
+pydicom.config.settings.reading_validation_mode = "WARN"
+
 # Path to your DICOM folder
 dicom_folder = r"C:\Users\Hp\Desktop\IIT Delhi Assignment\hip-joint-dicom-to-stl\data"
 
