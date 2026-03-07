@@ -2,9 +2,6 @@
 
 A Python pipeline to convert a hip joint CT scan from DICOM format into a 3D model exported as an STL file.
 
-## Objective
-Load a DICOM series of an adult hip joint, process the CT scan data, generate a 3D surface model using Marching Cubes algorithm, and export it in STL format.
-
 ## Dependencies
 - Python 3.9+
 - pydicom
