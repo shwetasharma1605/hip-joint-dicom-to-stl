@@ -46,6 +46,8 @@ hip-joint-dicom-to-stl/
 ```
 
 ## References
-- TCIA Pelvic Reference Data
-- pydicom documentation
-- scikit-image Marching Cubes
+- TCIA Pelvic Reference Data: https://www.cancerimagingarchive.net/collection/pelvic-reference-data/
+- pydicom documentation: https://pydicom.github.io/
+- scikit-image Marching Cubes: https://scikit-image.org/docs/stable/api/skimage.measure.html#skimage.measure.marching_cubes
+- Femoral Head Segmentation reference: https://github.com/Sentz98/FemoralHeadSegmentation
+- DICOM to STL reference: https://github.com/dave3d/dicom2stl
